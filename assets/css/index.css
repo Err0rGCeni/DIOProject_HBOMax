@@ -1,0 +1,161 @@
+@import url("./global.css");
+
+main {
+  background: url("../images/background-subscription.png") no-repeat;
+  background-size: cover;
+}
+
+.number-especial {
+    font-family: 'Nova Square', cursive;
+    transition: 0.5s;
+}
+
+.number-especial:hover {
+    scale: 1.2;
+    transition: 1s;
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    margin-top: 50px;
+    padding: 100px 0 300px;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: bg-gradient-moving 5s ease infinite alternate;
+}
+
+.header::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+.header .header__content {
+    padding: 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.header .header__channels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.header__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.header__title--light {
+    display: block;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.header .divider {
+    width: 70%;
+    max-width: 700px;
+    height: 5px;
+    background: var(--divider-bg-color);
+}
+
+.header .offer {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.header .offer__price {    
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header .offer__price--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.header .header__button {
+    animation: wiggle 2s linear infinite;
+}
+
+.header .text--small {
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Keyframes */
+@keyframes bg-gradient-moving {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    30% {
+        background-position: 75% 75%;
+    }
+
+    50% {
+        filter: brightness(1.2);
+        background-position: 100% 50%;
+    }
+
+    70% {
+        background-position: 75% 75%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes wiggle {
+
+    50% {
+        
+        transform: rotate(0deg);
+    }
+
+    60% {
+        filter: blur(0px);
+        transform: rotate(20deg);
+    }
+
+    65% {
+        filter: blur(1px);
+    }
+
+    70% {
+        filter: blur(2px); 
+        transform: rotate(-20deg);
+    }
+
+    75% {
+        filter: blur(1px);
+    }
+
+    80% {
+        filter: blur(0px); 
+        transform: rotate(10deg);
+    }
+
+    90% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+    
+}
